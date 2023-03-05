@@ -25,8 +25,9 @@
     "typescript": "4.9.4"
   },
   "manifest": {
-    "host_permissions": [
-      "https://*/*"
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAziG4j2+AwOi3mXYLILhwiZFiUz8Bdgg8N/DXtYn2K/j5peL7C5hvagzuQvYq95+YHP0/zs22bmLuEqVQdOHijOXYxpV95dy2UJ9g5qSSD1hZFSZs58LDcjbhNxXWlos+BlN7z8UMwkMZam9/A2X8ftvGC/p9SHkv4jZFbPR/GLIpR/TLYlQOIW8PpTDx+wWV0ZpZxTMkMInH7VZb/71XeJCDpmP8MyvfNRZnxqC7UZvysH0dOaYSm3j14uTiKDBlEpSZWOt8L1bqI/eU14PO2ZyoE31wX4W7MzB0vlx8nzUwXfhdZC7xliU7gyspOipvgZxs0oivPMfSdo6goc2FAQIDAQAB",
+    "permissions": [
+      "storage"
     ]
   }
 }
