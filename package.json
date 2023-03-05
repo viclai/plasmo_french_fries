@@ -1,7 +1,7 @@
 {
   "name": "plasmo-french-fries",
   "displayName": "Plasmo french fries",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic Plasmo extension.",
   "author": "viclai",
   "scripts": {
