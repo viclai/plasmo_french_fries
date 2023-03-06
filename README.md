@@ -1,33 +1,25 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# plasmo_french_fries
 
-## Getting Started
+This repository is meant to be a sample for reproducing https://github.com/PlasmoHQ/plasmo/issues/488.
 
-First, run the development server:
-
-```bash
-pnpm dev
-# or
-npm run dev
-```
-
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
+1. Clone this repository.
+2. Install [`pnpm`](https://pnpm.io/installation).
+3. Execute the follow commands in Terminal with the current directory being the root of this repository.
 
 ```bash
-pnpm build
-# or
-npm run build
+git checkout v0.0.1
+pnpm i
+pnpm build --tag=0.0.1
+git checkout v0.0.2
+pnpm build --tag=0.0.2
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+4. Open chrome://extensions in your Chrome browser.
+5. Toggle "Developer mode" on.
+6. Click on "Load unpacked", and find/select the folder entitled, `chrome-mv3-prod-0.0.1`.
+7. Open a new-tab page, and leave it open for the next step. The page should simply show a copy, "installed".
+8. Go back to chrome://extensions, click on "Load unpacked", and find/select the folder entitled, `chrome-mv3-prod-0.0.2`.
 
-## Submit to the webstores
+If the update event triggered, then it should show "update from 0.0.1" as the copy when a new-tab page is opened.
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+Try repeating the above steps, but for step 7, make sure that no new-tab page is open.
